@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:wght@400;700&family=Montserrat:wght@500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="sass/style.css">
+    <script src="js/main.js" type="module"></script>
+    <title>To Do List</title>
+</head>
+
+<body>
+    <main>
+        <section class="newItemEntry">
+            <form action="" id="itemEntryForm">
+                <label for="newItem">Enter A New To Do Item</label>
+                <input type="text" size="40" autocomplete="off" placeholder="Add Item" tabindex="0" id="newItem">
+                <button id="addItem" class="button" title="Add New Item" aria-label="Add New Item To List"
+                    tabindex="0">+</button>
+            </form>
+        </section>
+        <section class="listContainer">
+            <div class="listTitle">
+                <h1 tabindex="0">To Do List</h1>
+                <button id="clearItems" class="button" title="Clear The List" aria-label="Remove All Items From List"
+                    tabindex="0">Clear</button>
+            </div>
+            <hr />
+            <div id="listItems"></div>
+            <p id="confirmation" class="confirmation" aria-live="assertive"></p>
+        </section>
+    </main>
+</body>
+
+</html>

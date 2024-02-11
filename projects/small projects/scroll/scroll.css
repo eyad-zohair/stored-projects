@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 5000px;
+}
+
+.scroller {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 3px;
+    background-color: #0075ff;
+    z-index: 1000;
+}

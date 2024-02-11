@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: Tahoma, Arial;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+section:first-child {
+    background-color: #ddd;
+}
+
+section:nth-child(2) {
+    background-color: #f6f6f7;
+}
+
+section:nth-child(3) {
+    background-color: #ccc;
+}
+
+section:last-child {
+    background-color: #eee;
+}
+
+.skills h3 {
+    margin: 0 0 10px 10px;
+    font-size: 20px;
+}
+
+.progress {
+    position: relative;
+    width: 500px;
+    height: 30px;
+    background-color: white;
+    margin: 10px;
+}
+
+.progress span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: indianred;
+    transition: width 0.3s linear;
+}

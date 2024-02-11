@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/framwork.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,700;1,800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="page">
+        <div class="sidebar">
+            <h3>Elzero</h3>
+            <ul>
+                <li>
+                    <a href="index.html" class=" flex">
+                        <i class="fa-regular fa-chart-bar fa-fw"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html" class="flex active">
+                        <i class="fa-solid fa-gear fa-fw"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html" class="flex">
+                        <i class="fa-regular fa-user fa-fw"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Projects.html" class="flex">
+                        <i class="fa-solid fa-diagram-project fa-fw"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html" class="flex">
+                        <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="friends.html" class="flex">
+                        <i class="fa-regular fa-circle-user fa-fw"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html" class="flex">
+                        <i class="fa-regular fa-file fa-fw"></i>
+                        <span>files</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="plans.html" class="flex">
+                        <i class="fa-regular fa-credit-card fa-fw"></i>
+                        <span>Plans</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="content">
+            <!--start head-->
+            <div class="head flex">
+                <div class="search">
+                    <input type="search" placeholder="Type A Keyword">
+                </div>
+                <div class="icons flex">
+                    <span class="notification">
+                        <i class="fa-regular fa-bell fa-lg"></i>
+                    </span>
+                    <img src="images/avatar/avatar.png" alt="">
+                </div>
+            </div>
+            <!--end head-->
+            <h1>Settings</h1>
+            <div class="settings-page grid">
+                <!--start settings box-->
+                <div class="boxer">
+                    <h2 class="h2-s">Site Control</h2>
+                    <p class="p-s">Control The Website If There Is Maintenance</p>
+                    <div class="info">
+                        <div>
+                            <span>Website Control</span>
+                            <p class="ft-grey">Open/Close Website And Type The Reason</p>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="toggle-checkbox" type="checkbox" checked>
+                                <div class="toggle-switch"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <textarea class="close-message" placeholder="Close Message Content"></textarea>
+                </div>
+                <!--end settings box-->
+                <!--start info-->
+                <div class="boxer">
+                    <h2 class="h2-s">General Info</h2>
+                    <p class="p-s">General Information About Your Account</p>
+                    <form class="info">
+                        <div>
+                            <label for="first" class="ft-grey">
+                                First Name
+                            </label>
+                            <input id="first" type="text" placeholder="First Name">
+                        </div>
+                        <div>
+                            <label for="last" class="ft-grey">
+                                Last Name
+                            </label>
+                            <input id="last" type="text" placeholder="Last Name">
+                        </div>
+                        <div>
+                            <label class="ft-grey" for="email">
+                                Email
+                            </label>
+                            <input id="email" type="text" class="dis" placeholder="o@nn.sa" disabled>
+                            <a class="ft-blue" href="">Change</a>
+                        </div>
+                    </form>
+                </div>
+                <!--end info-->
+                <!--start security-->
+                <div class="boxer security">
+                    <h2 class="h2-s">Security Info</h2>
+                    <p class="p-s">Security Information About Your Account</p>
+                    <div class="box">
+                        <div class="text">
+                            <h3>Password</h3>
+                            <p class="ft-grey">Last Change On 25/10/2021</p>
+                        </div>
+                        <a href="" class="btn ft-white bg-blue">
+                            Change
+                        </a>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>Two-Factor Authentication</h3>
+                            <p class="ft-grey">Enable/Disable The Feature</p>
+                        </div>
+                        <a href="">
+                            <label>
+                                <input class="toggle-checkbox" type="checkbox" checked>
+                                <div class="toggle-switch"></div>
+                            </label>
+                        </a>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>Devices</h3>
+                            <p class="ft-grey">Check The Login Devices List</p>
+                        </div>
+                        <a href="" class="btn">
+                            Devices
+                        </a>
+                    </div>
+                </div>
+                <!--end security-->
+                <!--start social-->
+                <div class="social-s boxer">
+                    <h2 class="h2-s">Social Info</h2>
+                    <p class="p-s">Social Media Information</p>
+                    <div class="box flex">
+                        <i class="fa-brands fa-twitter flex-all ft-grey"></i>
+                        <input type="text" placeholder="Twitter Username">
+                    </div>
+                    <div class="box flex">
+                        <i class="fa-brands fa-facebook-f flex-all ft-grey"></i>
+                        <input type="text" placeholder="Facebook Username">
+                    </div>
+                    <div class="box flex">
+                        <i class="fa-brands fa-linkedin flex-all ft-grey"></i>
+                        <input type="text" placeholder="Linkedin Username">
+                    </div>
+                    <div class="box flex">
+                        <i class="fa-brands fa-youtube flex-all ft-grey"></i>
+                        <input type="text" placeholder="Youtube Username">
+                    </div>
+                </div>
+                <!--end social-->
+                <!--start check-->
+                <div class="check boxer">
+                    <h2 class="h2-s">Widgets Control</h2>
+                    <p class="p-s">Show/Hide Widgets</p>
+                    <div class="control flex">
+                        <input type="checkbox" id="one" checked>
+                        <label for="one">Quick Draft</label>
+                    </div>
+                    <div class="control flex">
+                        <input type="checkbox" id="two" checked>
+                        <label for="two">Yearly Targets</label>
+                    </div>
+                    <div class="control flex">
+                        <input type="checkbox" id="three" checked>
+                        <label for="three">Tickets Statistics</label>
+                    </div>
+                    <div class="control flex">
+                        <input type="checkbox" id="four" checked>
+                        <label for="four">Latest News</label>
+                    </div>
+                    <div class="control flex">
+                        <input type="checkbox" id="five">
+                        <label for="five">Latest Tasks</label>
+                    </div>
+                    <div class="control flex">
+                        <input type="checkbox" id="six" checked>
+                        <label for="six">Top Search Items</label>
+                    </div>
+                </div>
+                <!--end check-->
+                <!--start back-->
+                <div class="back boxer">
+                    <h2 class="h2-s">Backup Manager</h2>
+                    <p class="p-s">Control Backup Time And Location</p>
+                    <div class="date flex">
+                        <input type="radio" name="time" id="one/" checked>
+                        <label for="one/">Daily</label>
+                    </div>
+                    <div class="date flex">
+                        <input type="radio" name="time" id="two/">
+                        <label for="two/">Weekly</label>
+                    </div>
+                    <div class="date flex">
+                        <input type="radio" name="time" id="three/">
+                        <label for="three/">Monthly</label>
+                    </div>
+                    <div class="servers flex">
+                        <input type="radio" name="servers" id="one0">
+                        <div class="server">
+                            <label for="one0">
+                                <i class="fa-solid fa-server"></i>
+                                Megaman
+                            </label>
+                        </div>
+                        <input type="radio" name="servers" id="two0" checked>
+                        <div class="server">
+                            <label for="two0">
+                                <i class="fa-solid fa-server"></i>
+                                Zero
+                            </label>
+                        </div>
+                        <input type="radio" name="servers" id="three0">
+                        <div class="server">
+                            <label for="three0">
+                                <i class="fa-solid fa-server"></i>
+                                Sigma
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--end back-->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Till Exam</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Arial;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #eee;
+            width: 600px;
+            height: 300px;
+            padding: 20px;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transition: 0.3s;
+        }
+
+        .container h3 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 10px 0 30px 0;
+            color: #009688;
+        }
+
+        .cont {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cont span {
+            padding: 10px;
+            border-radius: 6px;
+            border: 2px solid #03a9f4;
+            height: 120px;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            text-align: center;
+            color: #222;
+        }
+
+        .finish {
+            position: absolute;
+            bottom: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .finished {
+            transform: translateY(50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-size: 23px;
+            font-weight: bold;
+            height: 300px;
+            margin: -150px 0;
+            color: white;
+            background-color: #009688;
+        }
+
+        @media (min-width: 777px) {
+            .container {
+                margin: -150px -300px;
+            }
+        }
+
+        @media (max-width: 776px) {
+            .container {
+                width: 100%;
+                transform: translateY(-50%);
+                left: 0;
+                padding-bottom: 50px;
+            }
+
+            .container:not(.finished) {
+                height: fit-content;
+            }
+
+            .cont {
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            .cont span {
+                width: 115px;
+                height: 115px;
+                flex-basis: 48%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Time Till Holiday</h3>
+        <div class="cont">
+            <span class="days"></span>
+            <span class="hours"></span>
+            <span class="minutes"></span>
+            <span class="seconds"></span>
+        </div>
+    </div>
+
+    <script>
+        let finish = false;
+        // the end of the year 
+        let countDownDate = new Date("Jan 18, 2024 9:0:0").getTime()
+
+        let counter = setInterval(() => {
+            // Get Date Now
+            DateNow = new Date().getTime();
+
+            let dateDiff = countDownDate - DateNow
+
+            // Get Time Units
+            let days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+            let minutes = Math.floor(dateDiff % (1000 * 60 * 60) / (1000 * 60))
+            let seconds = Math.floor(dateDiff % (1000 * 60) / (1000))
+
+            if (dateDiff >= 0) {
+                document.querySelector(".days").innerHTML = `${days < 10 ? "0" + days : days} Days`
+                document.querySelector(".hours").innerHTML = `${hours < 10 ? "0" + hours : hours} Hours`
+                document.querySelector(".minutes").innerHTML = `${minutes < 10 ? "0" + minutes : minutes} Mins`
+                document.querySelector(".seconds").innerHTML = `${seconds < 10 ? "0" + seconds : seconds} Secs`
+            } else {
+                document.querySelector(".days").innerHTML = `00 Days`
+                document.querySelector(".hours").innerHTML = `00 Hours`
+                document.querySelector(".minutes").innerHTML = `00 Mins`
+                document.querySelector(".seconds").innerHTML = `00 Secs`
+
+                let number = 5;
+                let cont = document.querySelector(".cont")
+                let message = document.createElement("p")
+                message.innerHTML = `surprise in ${number}`
+                message.className = "finish"
+                cont.appendChild(message)
+                let surprise = setInterval(() => {
+                    number--
+                    if (number === 0) {
+                        clearInterval(surprise)
+                        document.querySelector(".container").style.transform = "translateY(-200%)"
+                        setTimeout(() => {
+                            document.querySelector(".container").remove()
+                            let div = document.createElement("div")
+                            div.innerHTML = "الف مبروك الاجازه روح العب كوره"
+                            div.classList.add("container")
+                            div.classList.add("finished")
+                            div.style.transform = "translateY(200%)"
+                            document.body.appendChild(div)
+
+                            setTimeout(() => {
+                                div.style.transform = "translateY(0%)"
+                            }, 0);
+                        }, 1000)
+                    }
+                    message.innerHTML = `surprise in ${number}`
+                }, 1000);
+                clearInterval(counter)
+            }
+        }, 1000)
+
+        // Get Date Now
+        DateNow = new Date().getTime();
+
+        let dateDiff = countDownDate - DateNow
+
+        // Get Time Units
+        let days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        let minutes = Math.floor(dateDiff % (1000 * 60 * 60) / (1000 * 60))
+        let seconds = Math.floor(dateDiff % (1000 * 60) / (1000))
+
+        if (dateDiff >= 0) {
+            document.querySelector(".days").innerHTML = `${days < 10 ? "0" + days : days} Days`
+            document.querySelector(".hours").innerHTML = `${hours < 10 ? "0" + hours : hours} Hours`
+            document.querySelector(".minutes").innerHTML = `${minutes < 10 ? "0" + minutes : minutes} Mins`
+            document.querySelector(".seconds").innerHTML = `${seconds < 10 ? "0" + seconds : seconds} Secs`
+        } else {
+            document.querySelector(".days").innerHTML = `00 Days`
+            document.querySelector(".hours").innerHTML = `00 Hours`
+            document.querySelector(".minutes").innerHTML = `00 Mins`
+            document.querySelector(".seconds").innerHTML = `00 Secs`
+        }
+    </script>
+</body>
+
+</html>

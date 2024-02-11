@@ -1,0 +1,56 @@
+body {
+    font-family: Tahoma, Arial;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont {
+    width: 200px;
+    height: 200px;
+    background-color: #f6f6f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.c1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    clip-path: circle(50px at 50% 50%);
+}
+
+.tmain {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+.t1 {
+    background-color: indianred;
+    clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+}
+
+.t2 {
+    background-color: violet;
+    clip-path: polygon(100% 50%, 0% 100%, 0% 0%);
+}
+
+.t3 {
+    background-color: rebeccapurple;
+    clip-path: polygon(50% 100%, 100% 0%, 0% 0%);
+}
+
+.t4 {
+    background-color: orangered;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.t5 {
+    background-color: blueviolet;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}

@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Arial;
+    margin: 0;
+}
+
+.serial {
+    width: 200px;
+    background-color: #eee;
+    padding: 20px;
+    margin: 20px auto 0;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 6px;
+    height: 66.5px;
+}
+
+.generate {
+    background-color: #ff5722;
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    user-select: none;
+}
+
+.generate:hover {
+    background-color: #f75421;
+}
+
+.choices {
+    display: flex;
+    margin: 15px auto;
+    width: fit-content;
+    gap: 10px;
+}
+
+.choice {
+    display: block;
+    background-color: #eee;
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 135px;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.choice.active {
+    background-color: #ff5722;
+    color: white;
+}

@@ -1,0 +1,196 @@
+:root {
+    --main-color: #2196f3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.choice {
+    border: 2px solid #eee;
+}
+
+.choice:not(:last-child) {
+    margin-right: 5px;
+}
+
+input:checked+.choice {
+    border-color: var(--main-color);
+}
+
+/***********************************/
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.overlay button {
+    width: 200px;
+    height: 100px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.game {
+    background-color: #eee;
+    min-height: 100vh;
+}
+
+.container {
+    margin: auto;
+    width: calc(100% - 50px);
+}
+
+.name {
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.message {
+    background-color: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+}
+
+.message span {
+    font-weight: bold;
+    color: #009688;
+}
+
+.message span:not(.best span)::before {
+    content: "[ ";
+}
+
+.message span:not(.best span)::after {
+    content: " ]";
+}
+
+.start {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #009688;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.the-word {
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    color: var(--main-color);
+    user-select: none;
+}
+
+.input {
+    margin: 15px 0;
+    width: 100%;
+    display: block;
+    padding: 15px;
+    border: 3px solid var(--main-color);
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 6px;
+    caret-color: var(--main-color);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.upcoming-words {
+    background-color: white;
+    margin: 15px 0;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.upcoming-words div {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: white;
+}
+
+.control span {
+    font-weight: bold;
+    color: #009688;
+}
+
+.level i {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.finish {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    padding: 15px;
+}
+
+.good {
+    color: var(--main-color);
+}
+
+.bad {
+    color: #f44336;
+}
+
+.best {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 900px;
+    }
+}

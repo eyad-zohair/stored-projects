@@ -1,0 +1,92 @@
+.listContainer {
+    height: 73vh;
+    padding: 0.75rem;
+    overflow-y: auto;
+
+    .listTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .bobabDiv {
+            position: absolute;
+            z-index: 4;
+            background-color: #009688;
+            color: white;
+            padding: 5px;
+            border-radius: 6px;
+            right: 1%;
+            top: 100%;
+            text-align: center;
+
+            button {
+                padding: 2px 5px;
+                background-color: #eee;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
+
+        button:not(.bobabDiv button) {
+            font-size: 1rem;
+            background-color: $clear-button-color;
+            padding: 0 0.1rem;
+            margin-bottom: 0.5rem;
+
+            @include mq(768px) {
+                padding: 0 0.5rem;
+            }
+        }
+
+        .bobabDiv::before {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent #009688 transparent;
+        }
+
+        hr {
+            width: 100%;
+        }
+    }
+
+    .item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 1rem;
+        overflow-x: auto;
+
+        input[type="checkbox"] {
+            text-align: center;
+            width: 2.5rem;
+            min-width: 48px;
+            height: 2.5rem;
+            min-height: 48px;
+            cursor: pointer;
+            margin-right: 1.5rem;
+        }
+
+        input[type="checkbox"]:checked+label {
+            text-decoration: underline;
+        }
+
+        label {
+            font-size: 1.1rem;
+        }
+    }
+
+    .confirmation {
+        position: absolute;
+        left: -1000000px;
+    }
+}

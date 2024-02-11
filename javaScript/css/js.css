@@ -1,0 +1,62 @@
+.wel {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 4px 10px;
+    font-size: 30px;
+}
+
+.five {
+    cursor: pointer;
+}
+
+.add-one {
+    background-color: blue
+}
+
+.show {
+    cursor: pointer;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    padding: 4px 10px;
+    width: fit-content;
+}
+
+.remove {
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.bobab {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #ddd;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.counter {
+    border: 1px solid #000000;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

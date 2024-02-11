@@ -1,0 +1,337 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+}
+
+/* color */
+.ft-blue {
+    color: var(--blue-color);
+}
+
+.bg-blue {
+    background-color: var(--blue-color);
+}
+
+.ft-orange {
+    color: var(--orange-color);
+}
+
+.bg-orange {
+    background-color: var(--orange-color);
+}
+
+.ft-green {
+    color: var(--green-color);
+}
+
+.bg-green {
+    background-color: var(--green-color);
+}
+
+.ft-red {
+    color: var(--red-color);
+}
+
+.bg-red {
+    background-color: var(--red-color);
+}
+
+.ft-grey {
+    color: var(--grey-color);
+}
+
+.bg-grey {
+    background-color: var(--grey-color);
+}
+
+.ft-white {
+    color: white;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+/* color */
+
+.boxer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* flex */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* flex */
+/* grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+}
+
+/* grid */
+/* width and height */
+.h-full {
+    height: 100%;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* width and height */
+/* components */
+.h2-s {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.p-s {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: var(--grey-color);
+}
+
+.btn {
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+/* button */
+.check .control input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.check .control label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.check .control label::before,
+.check .control label::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    border-radius: 4px;
+}
+
+.check .control label::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--grey-color);
+}
+
+.check .control label:hover::before {
+    border-color: var(--blue-alt-color);
+}
+
+.check .control label::after {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) rotate(360deg);
+    transition: 0.3s;
+}
+
+.check .control input[type="checkbox"]:checked+label::after {
+    transform: scale(1);
+}
+
+/*----------------------------------------------------------------------------------*/
+.back input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.back .date label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.back .date label::before,
+.back .date label::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+}
+
+.back .date label::before {
+    top: 50%;
+    left: 0;
+    margin-top: -11px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-color);
+}
+
+.back .date label::after {
+    left: 5px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--blue-color);
+    transition: 0.3s;
+    transform: scale(0);
+}
+
+.back .date input[type="radio"]:checked+label::before {
+    border-color: var(--blue-color);
+}
+
+.back .date input[type="radio"]:checked+label::after {
+    transform: scale(1);
+}
+
+/*----------------------------------------------------------------------------------*/
+.back .servers {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+@media (max-width:767px) {
+    .back .servers {
+        flex-wrap: wrap;
+    }
+}
+
+.back .servers .server {
+    border: 2px solid #eee;
+    position: relative;
+}
+
+.back .servers .server label {
+    cursor: pointer;
+}
+
+.back .servers input[type="radio"]:checked+.server {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+
+/*----------------------------------------------------------------------------------*/
+.toggle-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.toggle-switch {
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+    background-color: var(--blue-color);
+}
+
+.toggle-checkbox:checked+.toggle-switch::before {
+    left: 50px;
+    color: var(--blue-color);
+    content: "\f00c";
+}
+
+/*------------------------------------------------------------------------------*/
+.toggle-checkbox-p {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.toggle-switch-p {
+    background-color: #ccc;
+    width: 78px;
+    height: 20px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.toggle-switch-p::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    transition: 0.3s;
+    font-size: 8px;
+}
+
+.toggle-checkbox-p:checked+.toggle-switch-p {
+    background-color: var(--blue-color);
+}
+
+.toggle-checkbox-p:checked+.toggle-switch-p::before {
+    left: 62px;
+    color: var(--blue-color);
+    content: "\f00c";
+}
+
+@media (max-width:767px) {
+    .m-center {
+        text-align: center;
+    }
+}
+
+/* components */

@@ -1,0 +1,54 @@
+.switcher {
+    list-style: none;
+    display: flex;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.switcher li {
+    background-color: #f6f6f6;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    transition: 0.7s;
+}
+
+.switcher li.active,
+.switcher li:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: fit-content;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.gallery div.all {
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery div.web {
+    background-color: #f44336;
+}
+
+.gallery div.gfx {
+    background-color: #3f51b5;
+}
+
+.gallery div.marketing {
+    background-color: black;
+}

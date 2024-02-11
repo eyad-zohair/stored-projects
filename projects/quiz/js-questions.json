@@ -1,0 +1,10 @@
+[
+    {
+        "title": "How To Write Text In Console",
+        "answer_1": "Using Console.text()",
+        "answer_2": "Using Document.console()",
+        "answer_3": "Using Console.log()",
+        "answer_4": "All Is Right",
+        "right_answer": "Using Console.log()"
+    }
+]

@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.charachter {
+    width: 50px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}

@@ -1,0 +1,10 @@
+[
+    {
+        "title": "How To Target An Element by Class",
+        "answer_1": "Writting Element Class Name",
+        "answer_2": "Using (.)",
+        "answer_3": "Writting Element Name",
+        "answer_4": "All Answers Are Wrong",
+        "right_answer": "Using (.)"
+    }
+]
